@@ -46,7 +46,7 @@ form {
   padding: 10px;
   border: 1px solid #eee;
   outline: none;
-  width: 65%;
+  width: 35%;
 }
 
 .inputForm::placeholder {
@@ -72,7 +72,8 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  overflow-y: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
   max-height: 60vh;
   height: 60vh;
 }
@@ -124,4 +125,9 @@ form {
 
 .noTasks {
   font-size: 48px;
+}
+
+.date{
+  width: 95%;
+  padding: 15px;
 }
