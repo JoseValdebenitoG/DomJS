@@ -66,12 +66,10 @@ export const createTask = ({value,dateFormat, complete, id}) => {
     const taskContent = document.createElement("div");
 
     // Tarea completada
-    console.log(complete);
     // Llamamos la funcion checkComplete
     const check = checkComplete(id);
     // Verificamos y si el check está activado
     if (complete){
-        console.log('completada');
         check.classList.toggle('fas');
         check.classList.toggle('completeIcon');
         check.classList.toggle('far');
@@ -87,12 +85,9 @@ export const createTask = ({value,dateFormat, complete, id}) => {
     taskContent.appendChild(check); // el check
     taskContent.appendChild(titleTask); // el titulo
 
-    // Agregamos el Campo para la fecha
-    const dateElement = document.createElement("span");
-    dateElement.innerHTML = dateFormat;
     task.appendChild(taskContent); // contenido de la tarjeta
-    task.appendChild(dateElement); // la fecha
+
     // agregamos un elemento hijo a la lista
-    task.appendChild(deleteIcon()); // icono basurero para borrar
+    task.appendChild(deleteIcon(id)); // icono basurero para borrar
     return task;
 };
